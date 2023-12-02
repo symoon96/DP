@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------------
+    파일정의 : 레이아웃
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @공통
+-------------------------------------------------------------------*/
+#skip-nav {height:0}
+#skip-nav a {display: block; position: absolute; left: 0; top: -100px; width: 100%; height: 1px; text-align: center}
+#skip-nav a:focus, #skip a:active {position: absolute; top: 0; z-index: 120; height: 25px; padding: 10px 0; font-size: 1.4em; font-weight: 700; color: #36348f; background: #fff;}
+
+/*-------------------------------------------------------------------
+    @header
+-------------------------------------------------------------------*/
+#header {position: absolute; width: 100%; }
+#header .container {height: 18rem; display: flex; align-items: center; justify-content: space-between;}
+#header .logo {width: 9.6rem; height: 7.6rem; background: url('../img/logo_color.png') no-repeat center; background-size: 100%;}
+#header .logo a {display: block; width: 100%; height: 100%; text-indent: -9999px;}
+#header .gnb .logo {display: none; position: absolute; left: 2rem; top: 2.8rem;}
+#header .gnb .btn-gnb-close {width: 4.5rem; height: 4.5rem; background: url('../img/ic_menu_close.png') no-repeat center; background-size: 100%; display: none; right: 2rem; top: 4rem; position: absolute;}
+#header .btn-gnb-open {width: 4.5rem; height: 4.5rem; background: url('../img/ic_menu_open.png') no-repeat center; background-size: 100%; display: none;}
+#header .gnb ul {display: flex; align-items: center; justify-content: flex-start; gap: 0 4.8rem;}
+#header .gnb ul li a {display: block; font-size: 2rem; font-weight: 600; letter-spacing: 0; color: #ffffff;}
+ 
+/*-------------------------------------------------------------------
+    @footer
+-------------------------------------------------------------------*/
+#footer {padding: 4rem 0; background-color: #202046;}
+#footer .container {padding-left: 15rem; background: url('../img/logo_g.png') no-repeat left 2rem top; background-size: 8.3rem;}
+#footer .copyright {font-size: 1.6rem; color: #ffffff; letter-spacing: 0;}
+#footer .fnb {margin-top: 1.2rem;}
+#footer .fnb ul {display: flex; gap: 0 4.5rem; align-items: center; justify-content: flex-start;}
+#footer .fnb ul li a {display: block; font-size: 1.6rem; color: #ffffff;}
+#footer .email {margin-top: 1.5rem; color: #ffffff; font-size: 1.6rem;}
+ 
+/*-------------------------------------------------------------------
+    @content
+-------------------------------------------------------------------*/
+#content{}
+
+.container {max-width: 144rem; padding-left: 2rem; padding-right: 2rem; margin-left: auto; margin-right: auto;}
+
+.has-padding{}
+
+/*-------------------------------------------------------------------
+    @floating
+-------------------------------------------------------------------*/
+ 
+/*-------------------------------------------------------------------
+    @popup
+-------------------------------------------------------------------*/
+.popup{}
+
+.popup .pop-head{}
+
+.popup .pop-cont{}
+
+.popup .pop-footer{}
+
+@media screen and (max-width: 1020px) {
+    /*-------------------------------------------------------------------
+        @footer
+    -------------------------------------------------------------------*/
+    #footer .container {padding-left: 2rem; padding-top: 9rem; background: url('../img/logo_g.png') no-repeat left 2rem top; background-size: 8.3rem;}
+
+}
+
+@media screen and (max-width: 960px) {
+    /*-------------------------------------------------------------------
+        @header
+    -------------------------------------------------------------------*/
+    #header .container {height: 12.5rem;}
+    #header .logo {width: 8.5rem; height: 7rem;}
+    #header .gnb {position: fixed; right: 0; top: 0; transform: translateX(100%); width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.95); padding: 12.5rem 2rem 2rem; transition: all 0.2s;}
+    #header .gnb .logo {display: block;}
+    #header .gnb .btn-gnb-close {display: block;}
+    #header .btn-gnb-open {display: block;}
+    #header .gnb ul {flex-direction: column;}
+    #header .gnb ul li {width: 100%;}
+    #header .gnb ul li a {font-size: 4.8rem; font-weight: 600; letter-spacing: 0; color: #ffffff; text-align: left; line-height: 1.2; padding: 2.4rem 0;}
+}
+
+@media screen and (max-width: 640px) {
+    /*-------------------------------------------------------------------
+        @header
+    -------------------------------------------------------------------*/
+    #header .container {height: 8rem;}
+    #header .logo {width: 5.4rem; height: 4.3rem;}
+    #header .gnb {position: fixed; right: 0; top: 0; transform: translateX(100%); padding: 10.9rem 2rem 2rem;}
+    #header .gnb .logo {top: 1.9rem;}
+    #header .gnb .btn-gnb-close {top: 2.7rem; width: 2.6rem; height: 2.6rem;}
+    #header .btn-gnb-open {width: 2.6rem; height: 2.6rem;}
+    #header .gnb ul li a {font-size: 3rem; padding: 1.5rem 0;}
+ 
+    /*-------------------------------------------------------------------
+        @footer
+    -------------------------------------------------------------------*/
+    #footer {padding: 3.5rem 0 5.5;}
+    #footer .container {padding-top: 6rem; background-size: 5rem;}
+    #footer .fnb {margin-top: 2rem;}
+    #footer .email {margin-top: 2rem;}
+
+}
